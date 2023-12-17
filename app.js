@@ -4,6 +4,10 @@ const authorEl = document.getElementById('author');
 
 const apiURL = 'https://api.quotable.io/random';
 
+function firstView() {
+  quoteEl.innerText = 'Press the button to get a quote';
+  authorEl.innerText = 'Which author is your favourite?'
+}
 
 async function getQuote() {
   try {
@@ -28,7 +32,9 @@ async function getQuote() {
   }
 }
 
-getQuote()
+// getQuote() Activate this to avoid firstView after start
+firstView()
+
 
 
 
